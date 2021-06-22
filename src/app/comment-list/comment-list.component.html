@@ -1,0 +1,10 @@
+<div class="comments-list">
+    <h3 class="comment-list-header">Comments:</h3>
+<div *ngIf="comments.length > 0">
+    <div class="comment-list-item" *ngFor="let comment of comments">
+        <p class="comments-list-comment-title">Title: {{ comment.name }}</p>
+        <p class="comments-list-comment-body">{{ comment.body }}</p>
+        <p class="comments-list-comment-by">By: {{comment.email }}</p>
+    </div>
+</div>
+</div>

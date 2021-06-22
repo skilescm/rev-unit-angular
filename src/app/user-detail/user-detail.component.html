@@ -1,0 +1,55 @@
+<div *ngIf="user">
+    <div class="basic-user-details">
+        <h3>General Info</h3>
+        <div>
+            Name: {{ user.name }}
+        </div>
+        <div>
+            Username: {{ user.username }}
+        </div>
+        <div>
+            Email: {{ user.email }}
+        </div>
+        <div>
+            Phone: {{ user.phone }}
+        </div>
+        <div>
+            Website: {{ user.website }}
+        </div>
+    </div>
+    <div class="user-address-details" *ngIf="user.address">
+        <h3>Address</h3>
+        <div>
+            {{ user.address.suite}}
+        </div>
+        <div>
+            {{ user.address.street}}
+        </div>
+        <div>
+            {{ user.address.city}}
+        </div>
+        <div>
+            {{ user.address.zipcode}}
+        </div>
+    </div>
+    <div class="user-company-details" *ngIf="user.company">
+        <h3>Company Details</h3>
+        <div>
+            Business Name: {{ user.company.name }}
+        </div>
+        <div>
+            Catch Phrase: {{ user.company.catchPhrase}}
+        </div>
+    </div>
+    <div class="user-albums" *ngIf="albums">
+        <h3>Albums</h3>
+        <div *ngFor="let album of albums">
+            <div class="user-album">
+                <p>
+                    {{ album.title }}
+                </p>
+            </div>
+        </div>
+    </div>
+    
+</div>

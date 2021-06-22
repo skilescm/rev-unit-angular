@@ -1,0 +1,11 @@
+<div class="post-list" *ngIf="posts">
+    <div class="post-list-item" *ngFor="let post of posts">
+        <div class="post-list-item-by">
+            <p>Posted By:</p>
+            <a class="user-name" [routerLink]="['/user',post['userId']]"><app-user-display [userId]="post['userId']"></app-user-display></a>
+        </div>
+        <div class="post-list-item-title">
+            <a class="post-title" [routerLink]="['/post',post['id']]">Title: {{ post['title'] }}</a>
+        </div>   
+    </div>
+</div>

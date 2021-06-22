@@ -1,0 +1,11 @@
+<div *ngIf="post">
+    <div *ngIf="userNumber > 0">
+        <app-user-display [userId]="userNumber"></app-user-display>
+    </div>
+    <p>{{ post['title'] }}</p> 
+    <p>{{post['body']}}</p>
+    <div *ngIf="postNumber > 0">
+        <app-comment-list [postId]="postNumber"></app-comment-list>
+    </div>
+</div>
+

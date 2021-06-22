@@ -1,0 +1,30 @@
+.post-list {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100vw;
+    padding: 0 50px;
+    margin-top: 25px;   
+}
+.post-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: solid 1px #000;
+}
+.post-list-item-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-left: 25px;
+    flex: 4;
+}
+.post-list-item-by {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-left: 25px;
+    flex: 1;
+}
