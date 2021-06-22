@@ -30,4 +30,8 @@ import { HttpClient } from '@angular/common/http';
   public getAlbums(userId: number) {
     return this.HttpClient.get(this.REST_API_SERVER+`/albums?userId=${userId}`)
   }
+
+  public getPhotos(albumId: number) {
+    return this.HttpClient.get(this.REST_API_SERVER+`/photos?albumId=${albumId}`)
+  }
 }

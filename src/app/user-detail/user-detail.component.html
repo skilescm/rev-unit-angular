@@ -46,7 +46,7 @@
         <div *ngFor="let album of albums">
             <div class="user-album">
                 <p>
-                    {{ album.title }}
+                 <a [routerLink]="['/album',album.id]">{{ album.title }}</a>
                 </p>
             </div>
         </div>

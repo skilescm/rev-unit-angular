@@ -1,1 +1,6 @@
-<p>image-gallery works!</p>
+<div *ngIf="photos">
+    <div *ngFor="let photo of photos">
+        <img src="{{ photo.thumbnailUrl }}" alt="{{ photo.title }}" title="{{ photo.title}}"/>
+        <p></p>
+    </div>
+</div>

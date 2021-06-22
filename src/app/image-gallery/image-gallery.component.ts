@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-image-gallery',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImageGalleryComponent implements OnInit {
 
-  constructor() { }
+  photos: any = [];
+
+  constructor(
+    private route: ActivatedRoute,
+    private dataService: DataService,
+  ) { }
 
   ngOnInit(): void {
+     //get the product id from the current route
+     const routeParams = this.route.snapshot.paramMap;
+     const albumIdFromRoute = Number(routeParams.get('albumId'));
+ 
+     this.dataService.getPhotos(albumIdFromRoute).subscribe((data: any )=> {
+       console.log(data, "photo list from album");
+       this.photos = data;
+       
+     })
   }
 
 }
